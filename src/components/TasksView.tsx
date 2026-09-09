@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { MOCK_TASKS, TaskWorkflow } from '../data/mockEcosystem';
-import { Sparkles, ArrowRight, Clock, Zap, CheckCircle2, Search } from 'lucide-react';
+import { Sparkles, ArrowRight, Clock, Zap, CheckCircle2, Play, Code2, Cpu, FileText } from 'lucide-react';
 
 interface TasksViewProps {
   onSelectTool: (slug: string) => void;
@@ -8,48 +8,156 @@ interface TasksViewProps {
 
 export const TasksView: React.FC<TasksViewProps> = ({ onSelectTool }) => {
   const [filterCat, setFilterCat] = useState('All');
-  const [search, setSearch] = useState('');
+  const [activeWorkflow, setActiveWorkflow] = useState(0);
+  const [activeStep, setActiveStep] = useState(0);
 
   const categories = ['All', 'Engineering & Code', 'Research & Search', 'Audio & Voice', 'Video & Motion', 'Sales & Growth'];
 
+  const samplePipelines = [
+    {
+      title: 'Fullstack App Prototyping Pipeline',
+      steps: [
+        { name: '1. UI Schema Generation', tool: 'v0 by Vercel', slug: 'v0', desc: 'Prompts generate accessible React + Tailwind components.' },
+        { name: '2. Multi-File Codebase Assembly', tool: 'Cursor IDE', slug: 'cursor', desc: 'Composer agent connects API endpoints and database handlers.' },
+        { name: '3. Test Suite Verification', tool: 'ChatGPT o1', slug: 'chatgpt', desc: 'Reasoning pass verifies edge cases, TypeScript strict types, and unit tests.' }
+      ]
+    },
+    {
+      title: 'Academic & Market Intelligence Pipeline',
+      steps: [
+        { name: '1. Real-Time Citation Search', tool: 'Perplexity Pro', slug: 'perplexity', desc: 'Extract verified facts from scientific papers with live links.' },
+        { name: '2. Synthesis & Executive Summary', tool: 'Claude 3.5 Sonnet', slug: 'claude-3-5-sonnet', desc: 'Compile structured takeaways, market trends, and tables.' },
+        { name: '3. Audio Briefing Generation', tool: 'ElevenLabs', slug: 'elevenlabs', desc: 'Convert structured memo into natural spoken audio briefing.' }
+      ]
+    }
+  ];
+
   const filtered = MOCK_TASKS.filter((task) => {
-    const matchesCat = filterCat === 'All' || task.category === filterCat;
-    const matchesSearch = task.title.toLowerCase().includes(search.toLowerCase()) || task.description.toLowerCase().includes(search.toLowerCase());
-    return matchesCat && matchesSearch;
+    return filterCat === 'All' || task.category === filterCat;
   });
 
   return (
     <div className="wrap" style={{ paddingTop: '40px', paddingBottom: '80px' }}>
       {/* Hero Header */}
-      <div style={{ textAlign: 'center', maxWidth: '680px', margin: '0 auto 40px' }}>
+      <div style={{ textAlign: 'center', maxWidth: '680px', margin: '0 auto 36px' }}>
         <div style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', background: 'rgba(110,86,207,0.12)', border: '1px solid rgba(110,86,207,0.25)', borderRadius: '99px', padding: '4px 14px', marginBottom: '16px' }}>
           <Sparkles size={12} color="#a78bfa" />
           <span style={{ fontSize: '0.75rem', fontWeight: 600, color: '#a78bfa', letterSpacing: '0.04em' }}>
-            Curated Workflows & Automation
+            Interactive Automation Pipelines
           </span>
         </div>
 
         <h1 style={{ fontSize: 'clamp(1.75rem, 4vw, 2.5rem)', fontWeight: 800, color: '#fff', letterSpacing: '-0.03em', lineHeight: 1.15, marginBottom: '14px' }}>
-          AI Tasks & Step-by-Step Workflows
+          AI Tasks & Visual Workflow Pipelines
         </h1>
         <p style={{ fontSize: '0.9375rem', color: '#a1a1aa', lineHeight: 1.6 }}>
-          Discover the exact tool stacks, prompt pipelines, and automated steps top engineers and creators use daily.
+          Explore autonomous chains where multiple specialized models cooperate to complete complex production tasks.
         </p>
       </div>
 
-      {/* Filter Row */}
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', marginBottom: '32px' }}>
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', alignItems: 'center', justifyContent: 'center' }}>
-          {categories.map((c) => (
-            <button
-              key={c}
-              onClick={() => setFilterCat(c)}
-              className={`pill ${filterCat === c ? 'active' : ''}`}
-            >
-              {c}
-            </button>
-          ))}
+      {/* 🌟 STANDOUT FEATURE: Interactive Visual Pipeline Studio */}
+      <div
+        style={{
+          background: 'linear-gradient(135deg, #0e0e14 0%, #12101e 100%)',
+          border: '1px solid rgba(110,86,207,0.35)',
+          borderRadius: '20px',
+          padding: '24px 28px',
+          marginBottom: '48px',
+          boxShadow: '0 20px 40px -15px rgba(0,0,0,0.8)'
+        }}
+      >
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '20px', flexWrap: 'wrap', gap: '12px' }}>
+          <div>
+            <span style={{ fontSize: '0.6875rem', fontWeight: 800, color: '#a78bfa', textTransform: 'uppercase', letterSpacing: '0.06em', display: 'block', marginBottom: '4px' }}>
+              VISUAL PIPELINE STUDIO
+            </span>
+            <h3 style={{ fontSize: '1.125rem', fontWeight: 700, color: '#fff', margin: 0 }}>
+              {samplePipelines[activeWorkflow].title}
+            </h3>
+          </div>
+
+          <div style={{ display: 'flex', gap: '8px' }}>
+            {samplePipelines.map((p, idx) => (
+              <button
+                key={idx}
+                onClick={() => {
+                  setActiveWorkflow(idx);
+                  setActiveStep(0);
+                }}
+                className={`pill ${activeWorkflow === idx ? 'active' : ''}`}
+                style={{ fontSize: '0.75rem', padding: '5px 12px' }}
+              >
+                Pipeline {idx + 1}
+              </button>
+            ))}
+          </div>
         </div>
+
+        {/* Pipeline Nodes Row */}
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '16px', position: 'relative' }}>
+          {samplePipelines[activeWorkflow].steps.map((st, idx) => {
+            const isCurrent = activeStep === idx;
+            return (
+              <div
+                key={idx}
+                onClick={() => setActiveStep(idx)}
+                style={{
+                  background: isCurrent ? '#181528' : '#0b0b0e',
+                  border: isCurrent ? '1px solid #6E56CF' : '1px solid #202028',
+                  borderRadius: '14px',
+                  padding: '18px',
+                  cursor: 'pointer',
+                  transition: 'all 150ms ease',
+                  position: 'relative',
+                  boxShadow: isCurrent ? '0 0 20px rgba(110,86,207,0.3)' : 'none'
+                }}
+                className="hover:border-[#6E56CF]/60"
+              >
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '8px' }}>
+                  <span style={{ fontSize: '0.75rem', fontWeight: 700, color: isCurrent ? '#c4b5fd' : '#71717a' }}>
+                    {st.name}
+                  </span>
+                  <Zap size={13} color={isCurrent ? '#a78bfa' : '#52525b'} />
+                </div>
+
+                <div style={{ fontSize: '0.875rem', fontWeight: 700, color: '#fff', marginBottom: '6px' }}>
+                  {st.tool}
+                </div>
+
+                <p style={{ fontSize: '0.75rem', color: '#a1a1aa', margin: 0, lineHeight: 1.5 }}>
+                  {st.desc}
+                </p>
+
+                <div style={{ marginTop: '12px', paddingTop: '10px', borderTop: '1px solid rgba(255,255,255,0.06)', display: 'flex', justifyContent: 'flex-end' }}>
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      onSelectTool(st.slug);
+                    }}
+                    style={{ fontSize: '0.6875rem', color: '#a78bfa', background: 'transparent', border: 'none', cursor: 'pointer', fontWeight: 600, display: 'flex', alignItems: 'center', gap: '4px' }}
+                    className="hover:text-white"
+                  >
+                    <span>Inspect Tool</span>
+                    <ArrowRight size={10} />
+                  </button>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+
+      {/* Filter Row */}
+      <div style={{ display: 'flex', justifyContent: 'center', gap: '8px', marginBottom: '28px', flexWrap: 'wrap' }}>
+        {categories.map((c) => (
+          <button
+            key={c}
+            onClick={() => setFilterCat(c)}
+            className={`pill ${filterCat === c ? 'active' : ''}`}
+          >
+            {c}
+          </button>
+        ))}
       </div>
 
       {/* Workflow Cards Grid */}

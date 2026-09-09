@@ -21,6 +21,7 @@ import {
   Info
 } from 'lucide-react';
 import { Tool } from '../types/tool';
+import { RoiCalculator } from './RoiCalculator';
 
 interface ToolDetailProps {
   tool: Tool;
@@ -485,6 +486,9 @@ export const ToolDetail: React.FC<ToolDetailProps> = ({
                   </a>
                 </div>
               ))}
+              <div style={{ gridColumn: '1 / -1' }}>
+                <RoiCalculator />
+              </div>
             </div>
           )}
 

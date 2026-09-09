@@ -1,6 +1,7 @@
 import React from 'react';
 import { MOCK_LEADERBOARD, LeaderboardEntry } from '../data/mockEcosystem';
 import { Trophy, TrendingUp, Zap, Sparkles, ArrowRight, Star, ShieldCheck } from 'lucide-react';
+import { RoiCalculator } from './RoiCalculator';
 
 interface LeaderboardViewProps {
   onSelectTool: (slug: string) => void;
@@ -114,6 +115,8 @@ export const LeaderboardView: React.FC<LeaderboardViewProps> = ({ onSelectTool }
           </table>
         </div>
       </div>
+
+      <RoiCalculator />
     </div>
   );
 };

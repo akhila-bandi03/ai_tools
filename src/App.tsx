@@ -3,6 +3,7 @@ import { Header } from './components/Header';
 import { FilterBar } from './components/FilterBar';
 import { ToolCard } from './components/ToolCard';
 import { ToolDetail } from './components/ToolDetail';
+import { ToolMatchmaker } from './components/ToolMatchmaker';
 import { TasksView } from './components/TasksView';
 import { LeaderboardView } from './components/LeaderboardView';
 import { BusinessView } from './components/BusinessView';
@@ -190,6 +191,9 @@ export const App: React.FC = () => {
                 </div>
               )}
             </div>
+
+            {/* ── AI Matchmaker Wizard ── */}
+            <ToolMatchmaker onSelectTool={handleSelectTool} />
 
             {/* ── Filters ── */}
             <FilterBar
