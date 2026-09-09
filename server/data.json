@@ -1,0 +1,728 @@
+[
+  {
+    "id": "tool-chatgpt",
+    "name": "ChatGPT",
+    "slug": "chatgpt",
+    "logo": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=120&auto=format&fit=crop&q=80",
+    "tagline": "Leading conversational AI model by OpenAI with GPT-4o intelligence",
+    "description": "ChatGPT is OpenAI’s flagship AI assistant, powered by GPT-4o and o1 reasoning models. It excels at complex reasoning, coding, writing, multimodality (voice, images, charts), canvas collaboration, and custom GPT extensions.",
+    "category": "LLMs & Chat",
+    "tags": [
+      "Conversational",
+      "GPT-4o",
+      "Reasoning",
+      "Vision",
+      "Voice Mode"
+    ],
+    "pricingType": "Freemium",
+    "startingPrice": "$0 / mo",
+    "isVerified": true,
+    "isFeatured": true,
+    "rating": 4.9,
+    "reviewCount": 3420,
+    "bookmarksCount": 18450,
+    "websiteUrl": "https://chatgpt.com",
+    "launchYear": 2022,
+    "companyName": "OpenAI",
+    "companyUrl": "https://openai.com",
+    "apiAvailable": true,
+    "contextWindow": "128k tokens",
+    "features": [
+      "Advanced multimodal reasoning (text, audio, vision)",
+      "Canvas interactive coding & writing workspace",
+      "Real-time voice mode with human-like latency",
+      "Custom GPTs marketplace & workspace knowledge files",
+      "Web search browsing with real-time citations",
+      "DALL-E 3 image generation embedded directly in conversation"
+    ],
+    "pros": [
+      "Top-tier general benchmark scores across logic, coding, and writing",
+      "Instant real-time web search and citation verification",
+      "Extensive ecosystem of plugins, GPTs, and integrations",
+      "Extremely generous free tier with GPT-4o mini and periodic GPT-4o access"
+    ],
+    "cons": [
+      "Token rate limits on Plus plan during peak global hours",
+      "Deep reasoning o1 models can have slower response latency"
+    ],
+    "pricingTiers": [
+      {
+        "name": "Free",
+        "price": "$0",
+        "period": "forever",
+        "description": "Access to GPT-4o mini and limited daily access to GPT-4o.",
+        "features": [
+          "GPT-4o mini intelligence",
+          "Limited GPT-4o access",
+          "Data analysis & file uploads",
+          "Browse the web"
+        ],
+        "ctaText": "Start Free"
+      },
+      {
+        "name": "Plus",
+        "price": "$20",
+        "period": "/ month",
+        "description": "Full unlimited access to standard GPT-4o and advanced reasoning models.",
+        "features": [
+          "5x more messages on GPT-4o",
+          "Access to OpenAI o1 reasoning",
+          "Real-time Voice Mode",
+          "Canvas code & writing editor",
+          "Create custom GPTs"
+        ],
+        "isPopular": true,
+        "ctaText": "Upgrade to Plus"
+      },
+      {
+        "name": "Team",
+        "price": "$25",
+        "period": "/ user / mo",
+        "description": "Dedicated workspace for teams with administrative control.",
+        "features": [
+          "Higher message caps",
+          "Team workspace admin console",
+          "No training on your business data",
+          "Share custom GPTs internally"
+        ],
+        "ctaText": "Start Team Plan"
+      },
+      {
+        "name": "Enterprise",
+        "price": "Custom",
+        "period": "annual",
+        "description": "Enterprise-grade security, dedicated account management, and SOC2 compliance.",
+        "features": [
+          "Unlimited high-speed GPT-4o",
+          "Expanded context window",
+          "Enterprise SSO & SCIM",
+          "Custom retention & HIPAA compliance"
+        ],
+        "ctaText": "Contact Sales"
+      }
+    ],
+    "reviews": [
+      {
+        "id": "rev-1",
+        "authorName": "Alex Rivera",
+        "userRole": "Staff Software Architect",
+        "rating": 5,
+        "date": "2 days ago",
+        "title": "The gold standard for daily engineering workflows",
+        "comment": "GPT-4o and the interactive Canvas mode have transformed how I draft system design documents and debug race conditions. The voice mode is also incredibly natural for rubber-ducking architecture.",
+        "helpfulCount": 84
+      },
+      {
+        "id": "rev-2",
+        "authorName": "Sarah Jenkins",
+        "userRole": "Growth & Product Lead",
+        "rating": 5,
+        "date": "1 week ago",
+        "title": "Unbeatable value for market research",
+        "comment": "The browsing capability combined with file analysis saves our team 15+ hours every week preparing competitive intelligence briefs.",
+        "helpfulCount": 42
+      }
+    ],
+    "promptExample": {
+      "task": "System Architecture Analysis",
+      "input": "Explain the difference between event sourcing and CQRS, and give a pragmatic Node.js/Kafka implementation pattern.",
+      "outputSnippet": "CQRS (Command Query Responsibility Segregation) separates read and write models, while Event Sourcing persists state changes as an immutable append-only event log. Together with Kafka, commands write events to topic `order-events`, and read projectors materialize denormalized Postgres query tables..."
+    },
+    "alternatives": [
+      {
+        "name": "Claude 3.5 Sonnet",
+        "slug": "claude-3-5-sonnet",
+        "category": "LLMs & Chat",
+        "pricingType": "Freemium",
+        "comparisonNote": "Often superior in nuanced coding and technical writing"
+      },
+      {
+        "name": "Perplexity AI",
+        "slug": "perplexity-ai",
+        "category": "Research & Search",
+        "pricingType": "Freemium",
+        "comparisonNote": "Optimized specifically for citation-backed real-time web research"
+      }
+    ]
+  },
+  {
+    "id": "tool-cursor",
+    "name": "Cursor",
+    "slug": "cursor",
+    "logo": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=120&auto=format&fit=crop&q=80",
+    "tagline": "The AI-first code editor built on VS Code with agentic Composer capabilities",
+    "description": "Cursor is an AI-powered code editor fork of VS Code engineered to maximize developer velocity. Features multi-file edits via Composer, codebase-wide semantic indexing, and seamless inline AI tab completions.",
+    "category": "Coding & Dev",
+    "tags": [
+      "IDE",
+      "VS Code",
+      "Composer",
+      "Agentic",
+      "Codebase Indexing"
+    ],
+    "pricingType": "Freemium",
+    "startingPrice": "$0 / mo",
+    "isVerified": true,
+    "isFeatured": true,
+    "rating": 5,
+    "reviewCount": 2891,
+    "bookmarksCount": 22300,
+    "websiteUrl": "https://cursor.com",
+    "launchYear": 2023,
+    "companyName": "Anysphere",
+    "companyUrl": "https://anysphere.inc",
+    "apiAvailable": false,
+    "contextWindow": "200k tokens",
+    "features": [
+      "Composer: Agentic multi-file code generation and refactoring",
+      "Semantic Codebase Indexing: AI understands your entire repo architecture",
+      "Next-edit prediction with lightning fast inline tab completion",
+      "Instant VS Code extension compatibility & one-click settings import",
+      "Built-in Claude 3.5 Sonnet, GPT-4o, and custom model switching",
+      "Terminal execution and auto-debugging of build errors"
+    ],
+    "pros": [
+      "Drastically faster than VS Code Copilot for multi-file architectural modifications",
+      "Maintains full familiarity with existing VS Code keybindings and theme extensions",
+      "Understands references across entire monorepos effortlessly",
+      "Composer agent mode can implement complete feature branches independently"
+    ],
+    "cons": [
+      "Pro plan fast-request credits can deplete rapidly during intense coding sessions",
+      "Occasional memory overhead when indexing massive multi-gigabyte repositories"
+    ],
+    "pricingTiers": [
+      {
+        "name": "Hobby",
+        "price": "$0",
+        "period": "forever",
+        "description": "Ideal for trying out Cursor with basic AI assistance.",
+        "features": [
+          "2,000 completions",
+          "50 slow premium requests",
+          "Full VS Code extension ecosystem",
+          "Codebase indexing"
+        ],
+        "ctaText": "Download Cursor"
+      },
+      {
+        "name": "Pro",
+        "price": "$20",
+        "period": "/ month",
+        "description": "For professional software engineers seeking maximal productivity.",
+        "features": [
+          "Unlimited completions",
+          "500 fast premium requests / mo",
+          "Unlimited slow requests",
+          "10 Claude 3.5 Sonnet Opus requests / day",
+          "Multi-file Composer mode"
+        ],
+        "isPopular": true,
+        "ctaText": "Start 14-Day Trial"
+      },
+      {
+        "name": "Business",
+        "price": "$40",
+        "period": "/ user / mo",
+        "description": "Designed for engineering organizations requiring privacy and centralized billing.",
+        "features": [
+          "Everything in Pro",
+          "Zero-data retention guarantee",
+          "Admin dashboard & usage stats",
+          "Centralized billing",
+          "SAML SSO"
+        ],
+        "ctaText": "Get Business"
+      }
+    ],
+    "reviews": [
+      {
+        "id": "rev-1788928671886",
+        "authorName": "Dev TesterDev Tester",
+        "userRole": "Software Engineer",
+        "rating": 5,
+        "date": "Just now",
+        "title": "Indispensable tool",
+        "comment": "Cursor dramatically accelerates our multi-file refactors.",
+        "helpfulCount": 0
+      },
+      {
+        "id": "rev-c1",
+        "authorName": "Elena Rostova",
+        "userRole": "Senior Full Stack Engineer",
+        "rating": 5,
+        "date": "3 days ago",
+        "title": "I cannot write code without Cursor anymore",
+        "comment": "Composer is pure magic. I described a new Stripe webhook handler with idempotent event logging, and it updated 4 files, added unit tests, and handled TypeScript typings in 30 seconds.",
+        "helpfulCount": 112
+      }
+    ],
+    "promptExample": {
+      "task": "Full Feature Refactor via Composer",
+      "input": "Convert our session-based auth in server/routes/auth.ts to JWT with refresh token rotation and update user schema.",
+      "outputSnippet": "Cursor Composer identified 3 related files: `server/routes/auth.ts`, `server/models/User.ts`, `server/middleware/auth.ts`. Generating atomic diffs with bcrypt hash verification and cookie signing..."
+    },
+    "alternatives": [
+      {
+        "name": "GitHub Copilot",
+        "slug": "github-copilot",
+        "category": "Coding & Dev",
+        "pricingType": "Paid",
+        "comparisonNote": "Native GitHub integration but lacks multi-file agentic Composer autonomy"
+      },
+      {
+        "name": "v0 by Vercel",
+        "slug": "v0-by-vercel",
+        "category": "Coding & Dev",
+        "pricingType": "Freemium",
+        "comparisonNote": "Focused on generative React/Next.js frontend UI components"
+      }
+    ]
+  },
+  {
+    "id": "tool-claude-3-5",
+    "name": "Claude 3.5 Sonnet",
+    "slug": "claude-3-5-sonnet",
+    "logo": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=120&auto=format&fit=crop&q=80",
+    "tagline": "Anthropic’s state-of-the-art LLM with industry-leading coding and Artifacts UI",
+    "description": "Claude 3.5 Sonnet sets the industry benchmark for code generation, complex reasoning, and multimodal document interpretation. The interactive Artifacts UI allows developers to preview React apps, SVG diagrams, and games side-by-side in real-time.",
+    "category": "LLMs & Chat",
+    "tags": [
+      "Anthropic",
+      "Artifacts",
+      "Coding",
+      "200k Context",
+      "Vision"
+    ],
+    "pricingType": "Freemium",
+    "startingPrice": "$0 / mo",
+    "isVerified": true,
+    "isFeatured": true,
+    "rating": 4.93,
+    "reviewCount": 3100,
+    "bookmarksCount": 19800,
+    "websiteUrl": "https://claude.ai",
+    "launchYear": 2024,
+    "companyName": "Anthropic",
+    "companyUrl": "https://anthropic.com",
+    "apiAvailable": true,
+    "contextWindow": "200k tokens",
+    "features": [
+      "Interactive Artifacts window for live code, SVG, and HTML previews",
+      "Top ranking on HumanEval and SWE-bench coding leaderboards",
+      "Massive 200,000 token context window (~150,000 words)",
+      "Superior visual document transcription and chart understanding",
+      "Projects workspace with custom instructions and reference knowledge",
+      "Computer use API capabilities for autonomous desktop navigation"
+    ],
+    "pros": [
+      "Arguably the most articulate and coherent code writing model on the market",
+      "Artifacts interface makes rapid web prototyping instant and delightful",
+      "Virtually zero sycophancy or hallucinated function signatures",
+      "Massive context window handles entire codebases or 500-page PDF documents"
+    ],
+    "cons": [
+      "Free tier message limits can be reached quickly during heavy work sessions",
+      "No built-in live web browsing search comparable to ChatGPT or Perplexity"
+    ],
+    "pricingTiers": [
+      {
+        "name": "Free",
+        "price": "$0",
+        "period": "forever",
+        "description": "Standard daily access to Claude 3.5 Sonnet on web and mobile.",
+        "features": [
+          "Claude 3.5 Sonnet access",
+          "Artifacts interactive preview",
+          "Document & image analysis",
+          "Standard context limits"
+        ],
+        "ctaText": "Use Claude Free"
+      },
+      {
+        "name": "Pro",
+        "price": "$20",
+        "period": "/ month",
+        "description": "5x usage limits and priority access during peak traffic.",
+        "features": [
+          "5x more messages than free tier",
+          "Priority access during peak hours",
+          "Create Projects with pinned documents",
+          "Early access to new features"
+        ],
+        "isPopular": true,
+        "ctaText": "Upgrade to Pro"
+      }
+    ],
+    "reviews": [
+      {
+        "id": "rev-cl1",
+        "authorName": "David Zhang",
+        "userRole": "Principal Frontend Engineer",
+        "rating": 5,
+        "date": "4 days ago",
+        "title": "Artifacts is the single best UX in AI history",
+        "comment": "Building dashboards and interactive SVG charts directly inside the Claude chat window cuts my prototyping cycle down from hours to minutes. Unmatched coding quality.",
+        "helpfulCount": 97
+      }
+    ],
+    "promptExample": {
+      "task": "Interactive Dashboard Prototype",
+      "input": "Create a full React component for a Crypto Portfolio Tracker with sparkline charts and live profit/loss calculations.",
+      "outputSnippet": "```tsx\nimport React, { useState } from \"react\";\nimport { TrendingUp, ArrowUpRight } from \"lucide-react\";\n// Rendered seamlessly in Claude Artifacts\nexport default function CryptoPortfolio() { ... }\n```"
+    },
+    "alternatives": [
+      {
+        "name": "ChatGPT",
+        "slug": "chatgpt",
+        "category": "LLMs & Chat",
+        "pricingType": "Freemium",
+        "comparisonNote": "Has live internet browsing and real-time voice mode"
+      }
+    ]
+  },
+  {
+    "id": "tool-midjourney",
+    "name": "Midjourney v6",
+    "slug": "midjourney-v6",
+    "logo": "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?w=120&auto=format&fit=crop&q=80",
+    "tagline": "World-renowned photorealistic and creative generative AI imagery",
+    "description": "Midjourney is the benchmark for high-fidelity text-to-image generation. Version 6 features hyper-photorealistic skin textures, accurate typographic rendering, consistent character styles, and web-based canvas inpainting.",
+    "category": "Image & Art",
+    "tags": [
+      "Generative Art",
+      "Photorealism",
+      "Typography",
+      "Inpainting",
+      "Design"
+    ],
+    "pricingType": "Paid",
+    "startingPrice": "$10 / mo",
+    "isVerified": true,
+    "isFeatured": true,
+    "rating": 4.88,
+    "reviewCount": 2450,
+    "bookmarksCount": 16700,
+    "websiteUrl": "https://midjourney.com",
+    "launchYear": 2022,
+    "companyName": "Midjourney, Inc.",
+    "companyUrl": "https://midjourney.com",
+    "apiAvailable": false,
+    "features": [
+      "Unsurpassed photographic lighting, textures, and composition",
+      "Text rendering directly inside generated graphic artwork",
+      "Dedicated Web UI editor with brush inpainting & pan out",
+      "Consistent character generation via --cref and style reference --sref"
+    ],
+    "pros": [
+      "Best-in-class aesthetic quality and cinematic composition",
+      "Vibrant community showcase and prompt inspiration"
+    ],
+    "cons": [
+      "No permanent free tier available",
+      "No official direct REST API"
+    ],
+    "pricingTiers": [
+      {
+        "name": "Basic",
+        "price": "$10",
+        "period": "/ month",
+        "description": "For casual creators.",
+        "features": [
+          "3.3 fast GPU hours / month",
+          "Commercial terms"
+        ],
+        "ctaText": "Subscribe Basic"
+      },
+      {
+        "name": "Standard",
+        "price": "$30",
+        "period": "/ month",
+        "description": "Unlimited Relax generations.",
+        "features": [
+          "15 fast GPU hours",
+          "Unlimited Relax mode"
+        ],
+        "isPopular": true,
+        "ctaText": "Subscribe Standard"
+      }
+    ],
+    "reviews": [
+      {
+        "id": "rev-m1",
+        "authorName": "Claire Laurent",
+        "userRole": "Creative Director",
+        "rating": 5,
+        "date": "5 days ago",
+        "title": "V6 is a monumental leap in photorealism",
+        "comment": "Midjourney is now our daily driver for visual inspiration.",
+        "helpfulCount": 71
+      }
+    ],
+    "alternatives": [
+      {
+        "name": "Runway Gen-3",
+        "slug": "runway-gen-3",
+        "category": "Video & 3D",
+        "pricingType": "Freemium",
+        "comparisonNote": "Generates cinematic video sequences from images and text"
+      }
+    ]
+  },
+  {
+    "id": "tool-elevenlabs",
+    "name": "ElevenLabs",
+    "slug": "elevenlabs",
+    "logo": "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?w=120&auto=format&fit=crop&q=80",
+    "tagline": "World-leading AI voice cloning, realistic text-to-speech, and audio effects",
+    "description": "ElevenLabs provides ultra-realistic speech synthesis with unmatched human intonation, pauses, accents, and emotional cadence. Offers instant voice cloning, multilingual dubbing, and conversational AI agents.",
+    "category": "Audio & Voice",
+    "tags": [
+      "Voice Cloning",
+      "Text to Speech",
+      "Dubbing",
+      "Audio API"
+    ],
+    "pricingType": "Freemium",
+    "startingPrice": "$0 / mo",
+    "isVerified": true,
+    "isFeatured": true,
+    "rating": 4.87,
+    "reviewCount": 1840,
+    "bookmarksCount": 14200,
+    "websiteUrl": "https://elevenlabs.io",
+    "launchYear": 2022,
+    "companyName": "ElevenLabs Inc.",
+    "companyUrl": "https://elevenlabs.io",
+    "apiAvailable": true,
+    "features": [
+      "Ultra-realistic human-like emotional intonation and cadence",
+      "Instant voice cloning from a 1-minute audio sample",
+      "Cross-lingual dubbing preserving the original voice in 32 languages"
+    ],
+    "pros": [
+      "Completely indiscernible from human voiceovers when tuned",
+      "Generous free tier to test voice synthesis"
+    ],
+    "cons": [
+      "Character quotas can be consumed fast on long podcasts"
+    ],
+    "pricingTiers": [
+      {
+        "name": "Free",
+        "price": "$0",
+        "period": "forever",
+        "description": "Test realistic voices.",
+        "features": [
+          "10,000 characters / month",
+          "3 custom voices"
+        ],
+        "ctaText": "Get Started"
+      },
+      {
+        "name": "Starter",
+        "price": "$5",
+        "period": "/ month",
+        "description": "For creators producing videos.",
+        "features": [
+          "30,000 characters / month",
+          "Instant Voice Cloning"
+        ],
+        "isPopular": true,
+        "ctaText": "Start for $5"
+      }
+    ],
+    "reviews": [],
+    "alternatives": []
+  },
+  {
+    "id": "tool-perplexity",
+    "name": "Perplexity AI",
+    "slug": "perplexity-ai",
+    "logo": "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=120&auto=format&fit=crop&q=80",
+    "tagline": "Conversational answer engine with verified real-time sources and Pro search",
+    "description": "Perplexity AI replaces traditional search engines with synthesized, direct answers backed by inline citations. Features Pro Search for multi-step reasoning, file uploads, Collections, and model choice.",
+    "category": "Research & Search",
+    "tags": [
+      "Search Engine",
+      "Citations",
+      "Pro Search",
+      "Research"
+    ],
+    "pricingType": "Freemium",
+    "startingPrice": "$0 / mo",
+    "isVerified": true,
+    "isFeatured": true,
+    "rating": 4.91,
+    "reviewCount": 2190,
+    "bookmarksCount": 15300,
+    "websiteUrl": "https://perplexity.ai",
+    "launchYear": 2022,
+    "companyName": "Perplexity AI, Inc.",
+    "companyUrl": "https://perplexity.ai",
+    "apiAvailable": true,
+    "features": [
+      "Inline numbered citations to authoritative web sources",
+      "Pro Search: Autonomous multi-query research with follow-up questions",
+      "Model toggle: Switch between Claude 3.5 Sonnet, GPT-4o, and Sonar"
+    ],
+    "pros": [
+      "Saves hours of scrolling through SEO spam",
+      "Every claim has a verified link"
+    ],
+    "cons": [
+      "Pro search quota is limited on the free tier"
+    ],
+    "pricingTiers": [
+      {
+        "name": "Free",
+        "price": "$0",
+        "period": "forever",
+        "description": "Fast searches with sources.",
+        "features": [
+          "Unlimited quick searches",
+          "5 Pro searches every 4h"
+        ],
+        "ctaText": "Search Free"
+      },
+      {
+        "name": "Pro",
+        "price": "$20",
+        "period": "/ month",
+        "description": "Complete research engine.",
+        "features": [
+          "300+ Pro searches / day",
+          "Claude 3.5 Sonnet & GPT-4o choice",
+          "$5 API credits"
+        ],
+        "isPopular": true,
+        "ctaText": "Get Pro"
+      }
+    ],
+    "reviews": [],
+    "alternatives": []
+  },
+  {
+    "id": "tool-v0",
+    "name": "v0 by Vercel",
+    "slug": "v0-by-vercel",
+    "logo": "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?w=120&auto=format&fit=crop&q=80",
+    "tagline": "Generative UI system by Vercel creating production-ready React & Tailwind code",
+    "description": "v0 is Vercel’s AI-powered design-to-code engine. It produces copy-pasteable React, Next.js, and Tailwind CSS components from plain English prompts or Figma screenshots.",
+    "category": "Coding & Dev",
+    "tags": [
+      "React",
+      "Next.js",
+      "Tailwind",
+      "shadcn/ui",
+      "Vercel"
+    ],
+    "pricingType": "Freemium",
+    "startingPrice": "$0 / mo",
+    "isVerified": true,
+    "isFeatured": true,
+    "rating": 4.85,
+    "reviewCount": 1620,
+    "bookmarksCount": 17100,
+    "websiteUrl": "https://v0.dev",
+    "launchYear": 2023,
+    "companyName": "Vercel",
+    "companyUrl": "https://vercel.com",
+    "apiAvailable": true,
+    "features": [
+      "Generates modern React components with Tailwind CSS",
+      "Interactive live canvas",
+      "One-click npx CLI import"
+    ],
+    "pros": [
+      "Produces clean, accessible code",
+      "Integrates with shadcn/ui seamlessly"
+    ],
+    "cons": [
+      "Requires backend developer to connect live database endpoints"
+    ],
+    "pricingTiers": [
+      {
+        "name": "Free",
+        "price": "$0",
+        "period": "forever",
+        "description": "For hobbyists.",
+        "features": [
+          "200 credits / mo",
+          "Public generations"
+        ],
+        "ctaText": "Start Free"
+      },
+      {
+        "name": "Premium",
+        "price": "$20",
+        "period": "/ month",
+        "description": "For professional engineers.",
+        "features": [
+          "5,000 credits / mo",
+          "Private generations",
+          "Figma import"
+        ],
+        "isPopular": true,
+        "ctaText": "Upgrade"
+      }
+    ],
+    "reviews": [],
+    "alternatives": []
+  },
+  {
+    "id": "tool-whisper",
+    "name": "Whisper",
+    "slug": "whisper",
+    "logo": "https://images.unsplash.com/photo-1546776310-eef45dd6d63c?w=120&auto=format&fit=crop&q=80",
+    "tagline": "OpenAI’s open-source multilingual speech recognition and translation model",
+    "description": "Whisper is a general-purpose speech recognition model trained on 680,000 hours of multilingual audio. It handles accents, background noise, and technical jargon with human-level accuracy.",
+    "category": "Audio & Voice",
+    "tags": [
+      "Open Source",
+      "Speech to Text",
+      "Transcription",
+      "Multilingual"
+    ],
+    "pricingType": "Open Source",
+    "startingPrice": "$0 (Free Apache 2.0)",
+    "isVerified": true,
+    "isFeatured": false,
+    "rating": 4.92,
+    "reviewCount": 3820,
+    "bookmarksCount": 24100,
+    "websiteUrl": "https://github.com/openai/whisper",
+    "launchYear": 2022,
+    "companyName": "OpenAI",
+    "companyUrl": "https://openai.com",
+    "apiAvailable": true,
+    "features": [
+      "100% Free & Open Source",
+      "98+ languages transcribed",
+      "Runs offline locally on GPU / Apple Silicon"
+    ],
+    "pros": [
+      "Zero recurring subscription cost",
+      "Complete data privacy offline"
+    ],
+    "cons": [
+      "Requires GPU VRAM for the large-v3 model"
+    ],
+    "pricingTiers": [
+      {
+        "name": "Open Source",
+        "price": "$0",
+        "period": "free forever",
+        "description": "Download weights from GitHub.",
+        "features": [
+          "All model weights included",
+          "Commercial MIT license"
+        ],
+        "isPopular": true,
+        "ctaText": "GitHub Repo"
+      }
+    ],
+    "reviews": [],
+    "alternatives": []
+  }
+]
